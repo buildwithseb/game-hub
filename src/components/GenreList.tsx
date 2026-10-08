@@ -10,7 +10,11 @@ const GenreList = () => {
       {isLoading && <Spinner />}
       {error && null}
       {data.map((genre) => (
-        <ListItem key={genre.id} paddingY="5px">
+        <ListItem
+          key={genre.id}
+          paddingY="5px"
+          onClick={() => console.log(genre.name)}
+        >
           <HStack>
             <Image
               boxSize="32px"
