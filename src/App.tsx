@@ -46,7 +46,7 @@ function App() {
       <GridItem area="main">
         <Box  paddingLeft={2}>
           <GameHeading gameQuery={gameQuery}  />
-          <Flex marginBottom={5}>
+          <HStack spacing={5} marginBottom={5}>
             <PlatformSelector
               selectedPlatform={gameQuery.platform}
               onSelectPlatform={(platform) =>
@@ -59,7 +59,7 @@ function App() {
                 setGameQuery({ ...gameQuery, sortOrder })
               }
             />
-          </Flex>
+          </HStack>
         </Box>
         <GameGrid gameQuery={gameQuery} />
       </GridItem>
